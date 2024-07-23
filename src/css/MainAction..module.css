@@ -1,0 +1,10 @@
+.actionSpan {
+  display: inherit;
+  place-items: center;
+  text-align: center;
+}
+.actionSpan h2 {
+  font-size: var(--fs-h);
+  font-weight: 200;
+  margin-bottom: 0.1em;
+}/*# sourceMappingURL=MainAction..module.css.map */

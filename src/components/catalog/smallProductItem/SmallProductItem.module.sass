@@ -1,0 +1,74 @@
+.smallprod
+  border-right: var(--body-border)
+  position: relative
+  display: grid
+  overflow: hidden
+  grid-template-rows: 1.3fr 1fr
+  &__imgwrapper
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    &_img
+      width: 100%
+      height: 100%
+      object-fit: contain
+  &__descrwrapper
+    border-top: var(--body-border)
+    padding: 5%
+    display: grid
+    grid-template-columns: 2fr 1.2fr
+    grid-template-rows: 1fr 0.5fr 0.5fr 1fr
+    grid-template-areas: "name name" "brand brand" "rate reviews" "descr price" "btns btns"
+    row-gap: 3%
+
+.name
+  grid-area: name
+  font-size: 2em
+  color: var(--text-color)
+  font-weight: 500
+
+.brand
+  grid-area: brand
+  font-size: 1.2em
+  color: var(--subtext-color)
+  font-weight: 600
+  place-self: center start
+
+.rate
+  grid-area: rate
+  font-size: 1.2em
+  color: var(--subtext-color)
+  font-weight: 600
+  place-self: center start
+
+.rewiews
+  grid-area: reviews
+  font-size: 1.2em
+  color: var(--subtext-color)
+  font-weight: 600
+  place-self: center end
+
+.description
+  grid-area: descr
+  font-size: 1.2em
+  color: var(--text-color)
+  font-weight: 500
+
+.price
+  grid-area: price
+  font-size: 2em
+  place-self: center end
+
+.btnsWrap
+  display: inherit
+  grid-area: btns
+  grid-template-columns: 2fr 1fr
+  & a
+    height: 3em
+    min-width: 18ch
+
+.cartbtn
+  place-self: center
+  height: 4em
+  cursor: pointer

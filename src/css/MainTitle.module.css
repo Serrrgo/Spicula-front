@@ -1,0 +1,24 @@
+.title {
+  display: flex;
+  flex-direction: column;
+}
+.title span {
+  white-space: nowrap;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+.title span span {
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  position: relative;
+}
+.title span span::before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 66 68' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33 0L34.576 29.1496L52.9847 6.49342L37.126 31.0023L65.3359 23.4934L38.1 34L65.3359 44.5066L37.126 36.9977L52.9847 61.5066L34.576 38.8504L33 68L31.424 38.8504L13.0153 61.5066L28.874 36.9977L0.664078 44.5066L27.9 34L0.664078 23.4934L28.874 31.0023L13.0153 6.49342L31.424 29.1496L33 0Z' fill='%23FF91B9'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  width: 1.804ch;
+  height: var(--fs-h);
+}/*# sourceMappingURL=MainTitle.module.css.map */

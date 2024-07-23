@@ -1,0 +1,102 @@
+header
+  display: grid
+  background-color: var(--bg-color)
+  border-bottom: var(--body-border)
+  height: var(--nav-height)
+  position: fixed
+  width: 100%
+  z-index: 100
+  //border-block: var(--body-border)
+
+.nav
+  display: grid
+  grid-template-columns: 1fr 3fr 2fr 2fr
+  & > *
+    border-right: var(--body-border)
+    width: 100%
+    height: 100%
+    display: inherit
+    place-items: center
+    &:last-child
+      border-right: none
+  &__logo
+    & svg
+      height: 1.3em
+  &__menu
+    grid-template-columns: repeat(4, 1fr)
+    padding-inline: 5%
+    &_item
+      position: relative
+      display: flex
+      align-items: center
+    &_link
+      color: var(--icon-color)
+      &::after, &::before
+        display: block
+        content: ""
+        background-color: var(--accent-color)
+        height: .2em
+        width: 100%
+        transform: scaleX(0)
+        transition: transform .3s ease-out
+        transform-origin: right
+      &:hover:after
+        transform-origin: left
+        transform: scaleX(1)
+      &.active::after
+        content: none
+      &.active
+        color: var(--text-color)
+        border-bottom: .2em solid var(--accent-color)
+  &__search
+    place-items: center
+    &_span
+      position: relative
+      width: 70%
+      font-size: calc(var(--fs-p)*.8)
+    &_input
+      text-align: start
+      width: 100%
+      height: 2.7em
+      line-height: 2em
+      padding: 0.5em 3.5em 0.5em 1em
+      background-color: transparent
+      border: var(--elem-border)
+      border-radius: 6rem
+      transition: all ease-in-out 0.5s
+      &:focus
+        border-color: var(--accent-color)
+        background-color: var(--focus-color)
+    &_button
+      display: grid
+      place-items: center
+      bottom: 0
+      position: absolute
+      height: 100%
+      aspect-ratio: 1
+      right: .5em
+      border: none
+      &:hover
+        cursor: pointer
+    &_icon
+      height: 1.2em
+  &__personal
+    grid-template-columns: 1fr 1fr 2fr
+    & > *
+      border-right: var(--body-border)
+      width: 100%
+      height: 100%
+      display: inherit
+      place-items: center
+      &:last-child
+        border-right: none
+        display: flex
+        justify-content: center
+    &_link
+      display: inherit
+      place-items: center
+      color: var(--icon-color)
+      &:last-child
+        gap: 1rem
+    &_icon
+      height: 2.2em

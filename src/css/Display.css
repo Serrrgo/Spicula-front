@@ -1,0 +1,12 @@
+.mainDisplay {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.mainDisplay__imgwrapper {
+  position: relative;
+  background-color: blue;
+}
+.mainDisplay__textwrapper {
+  place-self: center;
+}/*# sourceMappingURL=Display.css.map */

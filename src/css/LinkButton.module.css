@@ -1,0 +1,26 @@
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--accent-border);
+  font-weight: 500;
+  padding: 1em 2em;
+  min-width: 20ch;
+  width: fit-content;
+  gap: 0.2em;
+  background-color: var(--bg-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+.linkButton:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+.linkButton:hover, .linkButton:hover .icon {
+  color: var(--bg-color);
+}
+
+.icon {
+  color: var(--text-color);
+  font-size: inherit;
+  width: 1.5em;
+}/*# sourceMappingURL=LinkButton.module.css.map */

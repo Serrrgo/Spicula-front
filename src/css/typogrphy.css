@@ -1,0 +1,48 @@
+html {
+  font-size: 62.5%;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, p, a, li, dt, dd, span, button {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+p, dd, li, span, dd {
+  font-size: var(--fs-p);
+  font-weight: 400;
+  color: var(--font-color);
+}
+
+textarea {
+  font-size: var(--fs-p);
+  font-weight: 400;
+  color: var(--subtext-color);
+}
+
+a, dt, button, svg {
+  font-size: var(--fs-p);
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+h4, h3, h2, h1 {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+h4 {
+  font-size: var(--fs-hhhh);
+}
+
+h3 {
+  font-size: var(--fs-hhh);
+}
+
+h2 {
+  font-size: var(--fs-hh);
+}
+
+h1 {
+  font-size: var(--fs-h);
+}/*# sourceMappingURL=typogrphy.css.map */

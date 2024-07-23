@@ -1,0 +1,4 @@
+.error {
+  font-size: calc(var(--fs-p) * 0.8);
+  color: tomato;
+}/*# sourceMappingURL=formError.module.css.map */

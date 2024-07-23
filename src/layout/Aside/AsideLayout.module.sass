@@ -1,0 +1,21 @@
+.asideLayout
+  z-index: 100
+  position: fixed
+  height: 100vh
+  width: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  display: grid
+  grid-template-columns: 1fr 1fr
+  justify-content: stretch
+  visibility: visible
+  & > div
+    grid-column-start: 2
+    background: var(--focus-color)
+    padding-inline: 8vw
+  &__close
+    position: absolute
+    aspect-ratio: 1
+    width: 5em
+    right: 1.5em
+    top: 1.5em
+    cursor: pointer

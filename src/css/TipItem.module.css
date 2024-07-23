@@ -1,0 +1,34 @@
+.wrap {
+  position: relative;
+  padding: 5em 4.5em 5em 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.wrap img {
+  filter: blur(10px) opacity(50%);
+  transition: 0.5s filter linear, 0.5s -webkit-filter linear;
+}
+.wrap:hover > img {
+  filter: blur(14px) opacity(20%);
+}
+.wrap p {
+  z-index: 2;
+  align-self: flex-end;
+  width: 50%;
+  position: relative;
+  padding-bottom: 1.5em;
+}
+.wrap p::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 95%;
+  left: 2%;
+  border-top: var(--body-border);
+}
+.wrap h3 {
+  width: 50%;
+  z-index: 2;
+}/*# sourceMappingURL=TipItem.module.css.map */

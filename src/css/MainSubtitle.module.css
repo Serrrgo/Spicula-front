@@ -1,0 +1,33 @@
+.subWrap {
+  font-size: var(--fs-h);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "a b" "a b" "a c";
+  gap: 0.4em;
+}
+.subWrap__img1 {
+  grid-area: a;
+  font-size: inherit;
+  margin-top: 0.6em;
+  align-self: end;
+}
+.subWrap__img2 {
+  grid-area: b;
+  margin-left: 0.2em;
+  width: 70%;
+}
+.subWrap__subtitle {
+  grid-area: c;
+  position: relative;
+  align-self: end;
+  padding-top: 1.5em;
+}
+.subWrap__subtitle::before {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 95%;
+  left: 2%;
+  border-top: var(--body-border);
+}/*# sourceMappingURL=MainSubtitle.module.css.map */

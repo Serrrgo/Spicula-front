@@ -1,0 +1,266 @@
+.sectionHead {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "title display1" "title display2" "action display3";
+}
+.sectionHead > * {
+  border-bottom: var(--body-border);
+}
+.sectionHead__title {
+  grid-area: title;
+  border-right: var(--body-border);
+  min-height: calc(100vh - var(--nav-height));
+  padding: 7% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sectionHead__action {
+  grid-area: action;
+  border-right: var(--body-border);
+  display: inherit;
+  place-items: center;
+}
+.sectionHead__3 {
+  grid-area: display1;
+}
+.sectionHead__4 {
+  grid-area: display2;
+}
+.sectionHead__5 {
+  grid-area: display3;
+}
+
+.sectionBestsellers {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: "title ." "carousel carousel";
+  min-height: calc(100vh - var(--nav-height));
+  border-bottom: var(--body-border);
+}
+.sectionBestsellers span {
+  grid-area: x;
+  border-right: var(--body-border);
+}
+.sectionBestsellers__title {
+  grid-area: title;
+  display: inherit;
+  place-items: center;
+  border-right: var(--body-border);
+}
+.sectionBestsellers__carousel {
+  grid-area: carousel;
+  height: calc(100vh - var(--nav-height));
+  width: 100%;
+  display: inherit;
+  grid-template-areas: "carousel carousel carousel carousel" ". . . btns";
+  grid-template-rows: 1fr auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+.sectionBestsellers__carousel_container {
+  grid-area: carousel;
+  border-top: var(--body-border);
+  overflow-x: auto;
+  min-height: 100%;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sectionBestsellers__carousel_wrapper {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  border-bottom: var(--body-border);
+}
+.sectionBestsellers__btns-wrap {
+  grid-area: btns;
+  height: calc(var(--nav-height) * 1.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: var(--body-border);
+  gap: 10%;
+}
+
+.sectionPopulars {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 5fr 0.6fr;
+  grid-template-areas: "title title . ." "market market market market" " . link link .";
+  min-height: calc(100vh - var(--nav-height));
+  border-bottom: var(--body-border);
+}
+.sectionPopulars__title {
+  grid-area: title;
+  display: inherit;
+  place-items: center;
+  border-right: var(--body-border);
+}
+.sectionPopulars__market {
+  grid-area: market;
+  display: inherit;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-top: var(--body-border);
+}
+.sectionPopulars__market > * {
+  border-bottom: var(--body-border);
+}
+.sectionPopulars__market > *:nth-child(4n) {
+  border-right: none;
+}
+.sectionPopulars__link {
+  grid-area: link;
+  display: inherit;
+  border-inline: var(--body-border);
+  place-items: center;
+}
+
+.sectionTips {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+}
+.sectionTips > * {
+  border-bottom: var(--body-border);
+}
+.sectionTips > article:nth-child(2n) {
+  border-right: var(--body-border);
+}
+.sectionTips__title {
+  height: var(--title-height);
+  display: inherit;
+  place-items: center;
+  grid-column: span 2;
+}
+
+.sectionAbout {
+  min-height: calc(100vh - var(--nav-height));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto 0.9fr;
+  grid-template-areas: "photo title" "photo text" "photo action";
+}
+.sectionAbout > * {
+  border-bottom: var(--body-border);
+}
+.sectionAbout__photo {
+  position: relative;
+  grid-area: photo;
+  border-right: var(--body-border);
+}
+.sectionAbout__title {
+  grid-area: title;
+  display: inherit;
+  place-items: center;
+  height: var(--title-height);
+}
+.sectionAbout__text {
+  grid-area: text;
+  display: inherit;
+  font-size: var(--fs-hhhh);
+  padding: 2em;
+}
+.sectionAbout__text_title {
+  margin-bottom: 1em;
+}
+.sectionAbout__text_sign {
+  justify-self: end;
+  margin-bottom: 3em;
+}
+.sectionAbout__text_text {
+  font-size: var(--fs-pp);
+}
+.sectionAbout__action {
+  grid-area: action;
+  display: inherit;
+  grid-template-columns: 2.5fr 1.5fr;
+}
+.sectionAbout__action_btnspan {
+  display: inherit;
+  place-items: center;
+  border-right: var(--body-border);
+}
+.sectionAbout__action_socialspan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+.sectionAbout__socbtn_icon {
+  width: 2.5em;
+}
+.sectionAbout__socbtn_icon:hover {
+  color: var(--accent-color);
+}
+
+.sectionFAQ {
+  min-height: calc(100vh - var(--nav-height));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto repeat(5, 1fr);
+  grid-template-areas: "title . " "qwest answer" "qwest answer" "qwest answer" "qwest answer" "qwest answer";
+}
+.sectionFAQ span {
+  border-bottom: var(--body-border);
+}
+.sectionFAQ > span:last-of-type {
+  border-bottom: none;
+}
+.sectionFAQ__title {
+  grid-area: title;
+  height: var(--title-height);
+  display: inherit;
+  place-items: center;
+  border-bottom: var(--body-border);
+  border-right: var(--body-border);
+}
+.sectionFAQ__answer {
+  grid-area: answer;
+  display: inherit;
+  place-items: center;
+}
+.sectionFAQ__answer p {
+  width: 60%;
+  letter-spacing: 0.03em;
+}
+.sectionFAQ__quest {
+  display: inherit;
+  align-items: center;
+  padding-inline: 3em;
+  border-right: var(--body-border);
+}
+.sectionFAQ__quest_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.5s;
+}
+.sectionFAQ__quest_title.active {
+  color: var(--accent-color);
+}
+.sectionFAQ__quest_title.active > .sectionFAQ__quest_title_icon {
+  transform: scaleX(-1);
+  color: var(--accent-color);
+}
+.sectionFAQ__quest_title_icon {
+  height: 2em;
+  transition: transform 0.3s, color 0.5s;
+}
+
+.fade-enter, .fade-appear {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}/*# sourceMappingURL=mainPage.css.map */

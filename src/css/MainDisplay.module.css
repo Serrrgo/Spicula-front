@@ -1,0 +1,26 @@
+.display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.display > *:first-child {
+  border-right: var(--body-border);
+}
+
+.imgwrapper {
+  position: relative;
+}
+
+.textwrapper {
+  display: inherit;
+  place-items: center;
+}
+.textwrapper span {
+  display: inherit;
+  place-items: center;
+  text-align: center;
+}
+.textwrapper span h2 {
+  font-size: var(--fs-h);
+  font-weight: 200;
+  margin-bottom: 0.1em;
+}/*# sourceMappingURL=MainDisplay.module.css.map */

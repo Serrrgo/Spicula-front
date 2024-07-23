@@ -1,0 +1,125 @@
+header {
+  display: grid;
+  background-color: var(--bg-color);
+  border-bottom: var(--body-border);
+  height: var(--nav-height);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr 2fr;
+}
+.nav > * {
+  border-right: var(--body-border);
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  place-items: center;
+}
+.nav > *:last-child {
+  border-right: none;
+}
+.nav__logo svg {
+  height: 1.3em;
+}
+.nav__menu {
+  grid-template-columns: repeat(4, 1fr);
+  padding-inline: 5%;
+}
+.nav__menu_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav__menu_link {
+  color: var(--icon-color);
+}
+.nav__menu_link::after, .nav__menu_link::before {
+  display: block;
+  content: "";
+  background-color: var(--accent-color);
+  height: 0.2em;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+  transform-origin: right;
+}
+.nav__menu_link:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.nav__menu_link.active::after {
+  content: none;
+}
+.nav__menu_link.active {
+  color: var(--text-color);
+  border-bottom: 0.2em solid var(--accent-color);
+}
+.nav__search {
+  place-items: center;
+}
+.nav__search_span {
+  position: relative;
+  width: 70%;
+  font-size: calc(var(--fs-p) * 0.8);
+}
+.nav__search_input {
+  text-align: start;
+  width: 100%;
+  height: 2.7em;
+  line-height: 2em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  background-color: transparent;
+  border: var(--elem-border);
+  border-radius: 6rem;
+  transition: all ease-in-out 0.5s;
+}
+.nav__search_input:focus {
+  border-color: var(--accent-color);
+  background-color: var(--focus-color);
+}
+.nav__search_button {
+  display: grid;
+  place-items: center;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 1;
+  right: 0.5em;
+  border: none;
+}
+.nav__search_button:hover {
+  cursor: pointer;
+}
+.nav__search_icon {
+  height: 1.2em;
+}
+.nav__personal {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.nav__personal > * {
+  border-right: var(--body-border);
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  place-items: center;
+}
+.nav__personal > *:last-child {
+  border-right: none;
+  display: flex;
+  justify-content: center;
+}
+.nav__personal_link {
+  display: inherit;
+  place-items: center;
+  color: var(--icon-color);
+}
+.nav__personal_link:last-child {
+  gap: 1rem;
+}
+.nav__personal_icon {
+  height: 2.2em;
+}/*# sourceMappingURL=Header.css.map */

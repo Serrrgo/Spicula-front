@@ -1,0 +1,10 @@
+.favbtn {
+  position: absolute;
+  width: 3em;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+.favbtn.favbtnActive {
+  color: #ff88cf;
+}/*# sourceMappingURL=FavoriteBtn.module.css.map */

@@ -1,0 +1,88 @@
+footer
+  display: grid
+  width: 100%
+  border-block: var(--body-border)
+  border-bottom: var(--body-border)
+  grid-template-columns: repeat(4, 1fr)
+  & > *
+    border-right: var(--body-border)
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    &:last-child
+      border-right: none
+
+.footer
+  &__col
+    &_title
+      font-size: var(--fs-hhhh)
+      border-bottom: var(--body-border)
+      text-align: center
+      line-height: 3.5em
+      height: 3.5em
+      margin-bottom: 3rem
+    &_item
+      margin-inline: 3rem
+      margin-bottom: 1.5em
+      &:first-child
+        margin-top: 0
+      &.email
+        font-size: calc(var(--fs-p)*1.3 )
+        & a
+          font-size: inherit
+          transition: .5s color
+          &:hover
+            color: var(--accent-color)
+      &.socmedia
+        display: flex
+        gap: 2em
+  &__phone
+    text-align: center
+    margin-bottom: 2em
+    &_link
+      font-size: calc(var(--fs-p)*1.5 )
+      width: fit-content
+      margin: 0 auto
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: .3em
+      margin-bottom: .3em
+      transition: .5s color
+      &:hover, &:hover .footer__phone_icon
+        color: var(--accent-color)
+    & span
+      font-size: calc(var(--fs-p)*.8 )
+  &__form
+    display: flex
+    height: 3em
+    border: .2rem solid var(--accent-color)
+    transition: border-color .5s
+    &.focused
+      border-color: var(--text-color)
+    &.focused > &_button
+      background-color: var(--text-color)
+    & > *
+      height: 100%
+    &_input
+      background-color: var(--bg-color)
+      width: 100%
+      padding: 1em
+      &:focus
+        background-color: var(--focus-color)
+    &_button
+      right: 0
+      aspect-ratio: 1
+      background-color: var(--accent-color)
+      transition: background-color .5s
+    &_icon
+      color: var(--bg-color)
+      width: 2em
+      vertical-align: -0.125em
+  &__socmedia
+    &_icon
+      width: 2em
+      &:hover
+        color: var(--accent-color)
+

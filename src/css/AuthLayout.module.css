@@ -1,0 +1,54 @@
+.authLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: var(--fs-hhhh);
+}
+.authLayout__titles {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.authLayout__title {
+  font-weight: 500;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.authLayout__title::after {
+  display: block;
+  content: "";
+  background-color: var(--accent-color);
+  height: 0.15em;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.authLayout__title:hover:after {
+  opacity: 1;
+  transform: translateY(100%);
+}
+.authLayout__title.authactive::after {
+  content: none;
+}
+.authLayout__title.authactive {
+  border-bottom: 0.15em solid var(--accent-color);
+  pointer-events: none;
+}
+
+.authForm {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.authForm > span {
+  display: flex;
+}
+.authForm > button {
+  margin-top: 1em;
+}/*# sourceMappingURL=AuthLayout.module.css.map */

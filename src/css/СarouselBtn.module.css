@@ -1,0 +1,10 @@
+.arrowBtn {
+  border: var(--body-border);
+  display: grid;
+  aspect-ratio: 1.7;
+  height: 2.7em;
+  place-items: center;
+}
+.arrowBtn__arrow {
+  fill: var(--text-color);
+}/*# sourceMappingURL=СarouselBtn.module.css.map */

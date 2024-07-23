@@ -1,0 +1,217 @@
+.sectionHead
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 1fr 1fr
+  grid-template-areas: "title display1" "title display2" "action display3"
+  & > *
+    border-bottom: var(--body-border)
+  &__title
+    grid-area: title
+    border-right: var(--body-border)
+    min-height: calc(100vh - var(--nav-height))
+    padding: 7% 10%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+  &__action
+    grid-area: action
+    border-right: var(--body-border)
+    display: inherit
+    place-items: center
+  &__3
+    grid-area: display1
+  &__4
+    grid-area: display2
+  &__5
+    grid-area: display3
+
+.sectionBestsellers
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 5fr
+  grid-template-areas: "title ." "carousel carousel"
+  min-height: calc(100vh - var(--nav-height))
+  border-bottom: var(--body-border)
+  & span
+    grid-area: x
+    border-right: var(--body-border)
+  &__title
+    grid-area: title
+    display: inherit
+    place-items: center
+    border-right: var(--body-border)
+  &__carousel
+    grid-area: carousel
+    height: calc(100vh - var(--nav-height))
+    width: 100%
+    display: inherit
+    grid-template-areas: "carousel carousel carousel carousel" ". . . btns"
+    grid-template-rows: 1fr auto
+    grid-template-columns: repeat(4, 1fr)
+    &_container
+      grid-area: carousel
+      border-top: var(--body-border)
+      overflow-x: auto
+      min-height: 100%
+      width: 100%
+      -ms-overflow-style: none
+      scrollbar-width: none
+    &_wrapper
+      display: flex
+      width: max-content
+      height: 100%
+      border-bottom: var(--body-border)
+  &__btns-wrap
+    grid-area: btns
+    height: calc(var(--nav-height) * 1.2)
+    display: flex
+    align-items: center
+    justify-content: center
+    border-left: var(--body-border)
+    gap: 10%
+
+
+.sectionPopulars
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: 1fr 5fr .6fr
+  grid-template-areas: "title title . ." "market market market market" " . link link ."
+  min-height: calc(100vh - var(--nav-height))
+  border-bottom: var(--body-border)
+  &__title
+    grid-area: title
+    display: inherit
+    place-items: center
+    border-right: var(--body-border)
+  &__market
+    grid-area: market
+    display: inherit
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    border-top: var(--body-border)
+    & > *
+      border-bottom: var(--body-border)
+    & > *:nth-child(4n)
+      border-right: none
+  &__link
+    grid-area: link
+    display: inherit
+    border-inline: var(--body-border)
+    place-items: center
+
+.sectionTips
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr 3fr 3fr
+  & > *
+    border-bottom: var(--body-border)
+  & > article:nth-child(2n)
+    border-right: var(--body-border)
+  &__title
+    height: var(--title-height)
+    display: inherit
+    place-items: center
+    grid-column: span 2
+
+.sectionAbout
+  min-height: calc(100vh - var(--nav-height))
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr auto .9fr
+  grid-template-areas: "photo title" "photo text" "photo action"
+  & > *
+    border-bottom: var(--body-border)
+  &__photo
+    position: relative
+    grid-area: photo
+    border-right: var(--body-border)
+  &__title
+    grid-area: title
+    display: inherit
+    place-items: center
+    height: var(--title-height)
+  &__text
+    grid-area: text
+    display: inherit
+    font-size: var(--fs-hhhh)
+    padding: 2em
+    &_title
+      margin-bottom: 1em
+    &_sign
+      justify-self: end 
+      margin-bottom: 3em
+    &_text
+      font-size: var(--fs-pp)
+  &__action
+    grid-area: action
+    display: inherit
+    grid-template-columns: 2.5fr 1.5fr
+    &_btnspan
+      display: inherit
+      place-items: center
+      border-right: var(--body-border)
+    &_socialspan
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 2em
+  &__socbtn
+    &_icon
+      width: 2.5em
+      &:hover
+        color: var(--accent-color)
+
+.sectionFAQ
+  min-height: calc(100vh - var(--nav-height))
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: auto repeat(5, 1fr)
+  grid-template-areas: "title . " "qwest answer" "qwest answer" "qwest answer" "qwest answer" "qwest answer"
+  & span
+    border-bottom: var(--body-border)
+  & > span:last-of-type
+    border-bottom: none
+  &__title
+    grid-area: title
+    height: var(--title-height)
+    display: inherit
+    place-items: center
+    border-bottom: var(--body-border)
+    border-right: var(--body-border)
+  &__answer
+    grid-area: answer
+    display: inherit
+    place-items: center
+    & p
+      width: 60%
+      letter-spacing: .03em
+  &__quest
+    display: inherit
+    align-items: center
+    padding-inline: 3em
+    border-right: var(--body-border)
+    &_title
+      display: flex
+      align-items: center
+      justify-content: space-between
+      position: relative
+      cursor: pointer
+      font-weight: 500
+      transition: color .5s
+      &.active
+        color: var(--accent-color)
+      &.active > &_icon
+        transform: scaleX(-1)
+        color: var(--accent-color)
+      &_icon
+        height: 2em
+        transition: transform .3s, color .5s
+
+
+.fade-enter, .fade-appear
+  opacity: 0
+
+.fade-enter-active, .fade-appear-active
+  opacity: 1
+  transition: opacity .3s ease-in
+
+.fade-exit
+  opacity: 1
+
+.fade-exit-active
+  opacity: 0
+  transition: opacity .3s ease-out

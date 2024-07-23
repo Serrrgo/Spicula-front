@@ -1,0 +1,21 @@
+.display
+  display: grid
+  grid-template-columns: 1fr 1fr
+  & > *
+    &:first-child
+      border-right: var(--body-border)
+
+.imgwrapper
+  position: relative
+
+.textwrapper
+  display: inherit
+  place-items: center
+  & span
+    display: inherit
+    place-items: center
+    text-align: center
+    & h2
+      font-size: var(--fs-h)
+      font-weight: 200
+      margin-bottom: .1em

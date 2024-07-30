@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IUserMenuItem } from '@/config/user-menu.confog';
+import { IUserMenuItem } from '@/config/user-menu.config';
 import styles from './UserMenuItem.module.sass';
 
 export function UserMenuItem({ item }: { item: IUserMenuItem }) {

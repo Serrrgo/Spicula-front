@@ -1,5 +1,5 @@
 import { SITE_PAGES } from '@/config/pages-url.config';
-import type { IGlobalLink } from '../../../../types/globalLinks.types';
+import type { IGlobalLink } from '../types/globalLinks.types';
 
 export const CLIENT_LINKS: IGlobalLink[] = [
 	{

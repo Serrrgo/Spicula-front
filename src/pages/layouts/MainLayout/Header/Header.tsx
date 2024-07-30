@@ -1,5 +1,5 @@
 //import './Header.sass';
-import { NAV_LINKS } from './header.data';
+import { NAV_LINKS } from '../../../../config/header-data';
 import NavLinks from './headerComponents/NavLinks';
 import NavLogo from './headerComponents/NavLogo';
 import NavPersonal from './headerComponents/NavPersonal';

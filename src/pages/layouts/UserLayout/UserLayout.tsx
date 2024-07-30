@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import UserMenuItem from '@/components/userMenu/UserMenuItem/UserMenuItem';
-import { UserMenu } from '@/config/user-menu.confog';
+import { UserMenu } from '@/config/user-menu.config';
 import { useTypedSelector } from '@/store/storeHooks/useTypedSelector';
 import styles from './UserLayout.module.sass';
 import { titleFont } from '@/styles/fonts';

@@ -13,14 +13,11 @@ header {
   grid-template-columns: 1fr 3fr 2fr 2fr;
 }
 .nav > * {
-  border-right: var(--body-border);
+  box-shadow: var(--sharder-body-right);
   width: 100%;
   height: 100%;
   display: inherit;
   place-items: center;
-}
-.nav > *:last-child {
-  border-right: none;
 }
 .nav__logo svg {
   height: 1.3em;
@@ -101,14 +98,13 @@ header {
   grid-template-columns: 1fr 1fr 2fr;
 }
 .nav__personal > * {
-  border-right: var(--body-border);
+  box-shadow: var(--sharder-body-right);
   width: 100%;
   height: 100%;
   display: inherit;
   place-items: center;
 }
 .nav__personal > *:last-child {
-  border-right: none;
   display: flex;
   justify-content: center;
 }

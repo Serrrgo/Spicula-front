@@ -5,7 +5,7 @@ import { titleFont } from '@/fonts';
 const SectionTips = () => {
 	return (
 		<section className='sectionTips'>
-			<div className='sectionTips__title'>
+			<div className='title sectionTips__title'>
 				<h2 className={titleFont.className}>Наши преимущества</h2>
 			</div>
 			{tipsData.map((item, i) => (

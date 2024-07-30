@@ -7,17 +7,16 @@ const Carousel: FC<{ products: IProduct[] }> = ({ products }) => {
 	const [productWidth, setProductWidth] = useState(0);
 	useEffect(() => {
 		const updateProductWidths = () => {
-			const container = document.querySelector(`.sectionBestsellers__carousel`);
+			const container = document.querySelector(
+				`.sectionBestsellers__carousel`,
+			) as HTMLElement;
 			if (container) {
-				const containerWidth = container.clientWidth;
-				const calculatedProductWidth = containerWidth * 0.22; // 25% ширины контейнера
-				setProductWidth(calculatedProductWidth);
+				const productWidth = container.offsetWidth / 4;
+				setProductWidth(productWidth);
 			}
 		};
-
 		updateProductWidths();
 		window.addEventListener('resize', updateProductWidths);
-
 		return () => {
 			window.removeEventListener('resize', updateProductWidths);
 		};
@@ -28,7 +27,7 @@ const Carousel: FC<{ products: IProduct[] }> = ({ products }) => {
 			`.sectionBestsellers__carousel_container`,
 		);
 		if (container) {
-			container.scrollBy({ left: -productWidth, behavior: 'smooth' });
+			container.scrollBy({ left: -productWidth * 4, behavior: 'smooth' });
 		}
 	};
 
@@ -37,14 +36,18 @@ const Carousel: FC<{ products: IProduct[] }> = ({ products }) => {
 			`.sectionBestsellers__carousel_container`,
 		);
 		if (container) {
-			container.scrollBy({ left: productWidth, behavior: 'smooth' });
+			container.scrollBy({ left: productWidth * 4, behavior: 'smooth' });
 		}
 	};
+	//console.log(products);
 	return (
 		<div className='sectionBestsellers__carousel'>
 			<div className='sectionBestsellers__carousel_container'>
 				{products ? (
-					<div className='sectionBestsellers__carousel_wrapper'>
+					<div
+						className='sectionBestsellers__carousel_wrapper'
+						style={{ width: `${productWidth * products.length}px` }}
+					>
 						{products.map(product => (
 							<SmallProductItem
 								key={product.id}
@@ -57,7 +60,11 @@ const Carousel: FC<{ products: IProduct[] }> = ({ products }) => {
 					<h2>В выбранной категории продуктов не найдено</h2>
 				)}
 			</div>
-			<div className='sectionBestsellers__btns-wrap'>
+			<span />
+			<div
+				className='sectionBestsellers__carousel_btns'
+				style={{ width: `${productWidth}px` }}
+			>
 				<CarouselBtn
 					direction='left'
 					onClick={() => scrollLeft()}

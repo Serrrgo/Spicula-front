@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr
   & > *
     &:first-child
-      border-right: var(--body-border)
+      box-shadow: var(--sharder-body-right)
 
 .imgwrapper
   position: relative
@@ -11,6 +11,7 @@
 .textwrapper
   display: inherit
   place-items: center
+  z-index: 1
   & span
     display: inherit
     place-items: center

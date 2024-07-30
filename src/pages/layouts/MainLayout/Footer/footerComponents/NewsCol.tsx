@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import LinkButton from '@/components/ui/linkButton/LinkButton';
 import SocialButton from '@/components/ui/socialButton/SocialButton';
-import SubscribeForm from '@/layout/Footer/footerComponents/SubscribeForm';
 import { LAW_DATA } from '@/constants/law.constants';
+import SubscribeForm from '@/pages/layouts/MainLayout/Footer/footerComponents/SubscribeForm';
 
 interface NewsColProps {
 	title: string;

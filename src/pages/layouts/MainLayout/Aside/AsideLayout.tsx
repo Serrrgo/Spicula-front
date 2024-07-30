@@ -5,11 +5,11 @@ import { useDispatch } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
 import { closeModal } from '@/store/auth/auth.slice';
 import { useTypedSelector } from '@/store/storeHooks/useTypedSelector';
-import AuthFormLayout from '../../components/authForm/AuthFormLayout';
+import AuthFormLayout from '../../../../components/authForm/AuthFormLayout';
 import styles from './AsideLayout.module.sass';
 
 const AsideLayout = () => {
-	const isVisible = useTypedSelector((state) => state.auth.isVisible);
+	const isVisible = useTypedSelector(state => state.auth.isVisible);
 	const dispatch = useDispatch();
 	return (
 		<CSSTransition

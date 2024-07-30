@@ -6,17 +6,19 @@
     border-bottom: var(--body-border)
   &__title
     grid-area: title
-    border-right: var(--body-border)
-    min-height: calc(100vh - var(--nav-height))
+    box-shadow: var(--sharder-body-right)
+    min-height: var(--viewport-height)
     padding: 7% 10%
     display: flex
     flex-direction: column
     justify-content: space-around
+    z-index: 1
   &__action
     grid-area: action
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
     display: inherit
     place-items: center
+    z-index: 1
   &__3
     grid-area: display1
   &__4
@@ -26,60 +28,66 @@
 
 .sectionBestsellers
   grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr 5fr
+  grid-template-rows: auto auto
   grid-template-areas: "title ." "carousel carousel"
-  min-height: calc(100vh - var(--nav-height))
   border-bottom: var(--body-border)
-  & span
-    grid-area: x
-    border-right: var(--body-border)
   &__title
     grid-area: title
     display: inherit
     place-items: center
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
   &__carousel
     grid-area: carousel
-    height: calc(100vh - var(--nav-height))
-    width: 100%
     display: inherit
-    grid-template-areas: "carousel carousel carousel carousel" ". . . btns"
-    grid-template-rows: 1fr auto
     grid-template-columns: repeat(4, 1fr)
+    grid-template-areas: "carousel carousel carousel carousel" "spn spn spn btns"
+    //height: calc(100vh - var(--nav-height))
     &_container
       grid-area: carousel
-      border-top: var(--body-border)
+      border-block: var(--body-border)
       overflow-x: auto
-      min-height: 100%
       width: 100%
       -ms-overflow-style: none
       scrollbar-width: none
     &_wrapper
       display: flex
-      width: max-content
       height: 100%
-      border-bottom: var(--body-border)
-  &__btns-wrap
-    grid-area: btns
-    height: calc(var(--nav-height) * 1.2)
-    display: flex
-    align-items: center
-    justify-content: center
-    border-left: var(--body-border)
-    gap: 10%
+    & span
+      grid-area: spn
+      box-shadow: var(--sharder-body-right)
+    &_btns
+      grid-area: btns
+      display: flex
+      height: var(--title-height)
+      width: 100%
+      align-items: center
+      justify-content: center
+      gap: 10%
 
+
+.sectionTips
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: auto 3fr 3fr
+  & > *
+    border-bottom: var(--body-border)
+    height: calc(var(--viewport-height)/2)
+  & > article:nth-child(2n)
+    box-shadow: var(--sharder-body-right)
+  &__title
+    display: inherit
+    place-items: center
+    grid-column: span 2
 
 .sectionPopulars
   grid-template-columns: repeat(4, 1fr)
-  grid-template-rows: 1fr 5fr .6fr
+  //grid-template-rows: auto 5fr .6fr
   grid-template-areas: "title title . ." "market market market market" " . link link ."
-  min-height: calc(100vh - var(--nav-height))
   border-bottom: var(--body-border)
   &__title
     grid-area: title
     display: inherit
     place-items: center
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
   &__market
     grid-area: market
     display: inherit
@@ -91,45 +99,33 @@
     & > *:nth-child(4n)
       border-right: none
   &__link
+    height: var(--title-height)
     grid-area: link
     display: inherit
-    border-inline: var(--body-border)
+    border-left: var(--body-border)
+    box-shadow: var(--sharder-body-right)
     place-items: center
-
-.sectionTips
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr 3fr 3fr
-  & > *
-    border-bottom: var(--body-border)
-  & > article:nth-child(2n)
-    border-right: var(--body-border)
-  &__title
-    height: var(--title-height)
-    display: inherit
-    place-items: center
-    grid-column: span 2
 
 .sectionAbout
-  min-height: calc(100vh - var(--nav-height))
+  height: var(--viewport-height)
   grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr auto .9fr
+  grid-template-rows: auto 1fr auto
   grid-template-areas: "photo title" "photo text" "photo action"
   & > *
     border-bottom: var(--body-border)
   &__photo
     position: relative
     grid-area: photo
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
   &__title
     grid-area: title
     display: inherit
     place-items: center
-    height: var(--title-height)
   &__text
     grid-area: text
     display: inherit
     font-size: var(--fs-hhhh)
-    padding: 2em
+    padding: 1.5em 2em
     &_title
       margin-bottom: 1em
     &_sign
@@ -140,11 +136,12 @@
   &__action
     grid-area: action
     display: inherit
+    height: var(--title-height)
     grid-template-columns: 2.5fr 1.5fr
     &_btnspan
       display: inherit
       place-items: center
-      border-right: var(--body-border)
+      box-shadow: var(--sharder-body-right)
     &_socialspan
       display: flex
       align-items: center
@@ -157,7 +154,7 @@
         color: var(--accent-color)
 
 .sectionFAQ
-  min-height: calc(100vh - var(--nav-height))
+  height: var(--viewport-height)
   grid-template-columns: 1fr 1fr
   grid-template-rows: auto repeat(5, 1fr)
   grid-template-areas: "title . " "qwest answer" "qwest answer" "qwest answer" "qwest answer" "qwest answer"
@@ -167,11 +164,10 @@
     border-bottom: none
   &__title
     grid-area: title
-    height: var(--title-height)
     display: inherit
     place-items: center
     border-bottom: var(--body-border)
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
   &__answer
     grid-area: answer
     display: inherit
@@ -183,7 +179,7 @@
     display: inherit
     align-items: center
     padding-inline: 3em
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
     &_title
       display: flex
       align-items: center

@@ -1,0 +1,25 @@
+.dashboard
+  min-height: var(--viewport-height)
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-template-rows: auto 1fr
+  grid-template-areas: "name title . ." "aside container container container"
+  & span
+    place-content: center
+    text-align: center
+    height: var(--title-height)
+    box-shadow: var(--sharder-body-right)
+    border-bottom: var(--body-border)
+  & span:nth-child(1)
+    grid-area: name
+  & span:nth-child(2)
+    grid-area: title
+
+.aside
+  min-height: 100%
+  grid-area: aside
+  box-shadow: var(--sharder-body-right)
+
+
+.container
+  grid-area: container

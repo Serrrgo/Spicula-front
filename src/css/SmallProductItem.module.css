@@ -1,27 +1,22 @@
 .smallprod {
-  border-right: var(--body-border);
+  box-shadow: var(--sharder-body-right);
   position: relative;
   display: grid;
-  overflow: hidden;
-  grid-template-rows: 1.3fr 1fr;
+  grid-template-rows: 1.2fr 1fr;
+  z-index: 10;
+  height: calc(var(--viewport-height) / 1.2);
 }
 .smallprod__imgwrapper {
   position: relative;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
-}
-.smallprod__imgwrapper_img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  margin: 2px;
 }
 .smallprod__descrwrapper {
   border-top: var(--body-border);
   padding: 5%;
   display: grid;
-  grid-template-columns: 2fr 1.2fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+  grid-template-columns: 2fr 1.1fr;
+  grid-template-rows: auto 0.5fr 0.5fr 1fr;
   grid-template-areas: "name name" "brand brand" "rate reviews" "descr price" "btns btns";
   row-gap: 3%;
 }
@@ -35,7 +30,7 @@
 
 .brand {
   grid-area: brand;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--subtext-color);
   font-weight: 600;
   place-self: center start;
@@ -43,7 +38,7 @@
 
 .rate {
   grid-area: rate;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--subtext-color);
   font-weight: 600;
   place-self: center start;
@@ -51,7 +46,7 @@
 
 .rewiews {
   grid-area: reviews;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--subtext-color);
   font-weight: 600;
   place-self: center end;
@@ -59,14 +54,15 @@
 
 .description {
   grid-area: descr;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: var(--text-color);
   font-weight: 500;
 }
 
 .price {
   grid-area: price;
-  font-size: 2em;
+  font-size: 2.2em;
+  font-weight: 500;
   place-self: center end;
 }
 

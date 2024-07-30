@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 import { AppProps } from 'next/app';
 import '@/components/mainPage/mainPage.sass';
-import Layout from '@/providers/Layout';
 import { SITE_NAME } from '@/constants/seo.constants';
-import '../layout/Footer/Footer.sass';
-import '../layout/Header/Header.sass';
 import '../styles/globals.sass';
 import '../styles/typogrphy.sass';
 import '../styles/vars.sass';
+import './layouts/MainLayout/Footer/Footer.sass';
+import './layouts/MainLayout/Header/Header.sass';
+import Layout from '@/pages/layouts/Layout';
 
 export const metadata: Metadata = {
 	title: {

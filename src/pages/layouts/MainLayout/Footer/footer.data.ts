@@ -1,5 +1,5 @@
 import { SITE_PAGES } from '@/config/pages-url.config';
-import type { IGlobalLink } from '../../types/globalLinks.types';
+import type { IGlobalLink } from '../../../../types/globalLinks.types';
 
 export const CLIENT_LINKS: IGlobalLink[] = [
 	{
@@ -8,7 +8,7 @@ export const CLIENT_LINKS: IGlobalLink[] = [
 	},
 	{
 		title: 'Личный кабинет',
-		href: SITE_PAGES.CLIENT,
+		href: SITE_PAGES.USER,
 	},
 	{
 		title: 'О нас',

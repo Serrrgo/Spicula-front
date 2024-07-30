@@ -3,8 +3,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { PropsWithChildren, useState } from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import AuthProvider from '@/providers/authProvider';
 import { persistor, store } from '@/store/store';
+import AuthProvider from './authProvider';
 
 export default function Providers({ children }: PropsWithChildren) {
 	const [client] = useState(
@@ -31,4 +31,3 @@ export default function Providers({ children }: PropsWithChildren) {
 		</QueryClientProvider>
 	);
 }
-

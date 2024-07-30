@@ -7,7 +7,7 @@ import { titleFont } from '@/fonts';
 const SectionPopulars: FC<TypeProducts> = ({ products }) => {
 	return (
 		<section className='sectionPopulars'>
-			<div className='sectionPopulars__title'>
+			<div className='title sectionPopulars__title'>
 				<h2 className={titleFont.className}>Популярные товары</h2>
 			</div>
 			<div className='sectionPopulars__market'>
@@ -18,14 +18,12 @@ const SectionPopulars: FC<TypeProducts> = ({ products }) => {
 					/>
 				))}
 			</div>
-			<span />
 			<div className='sectionPopulars__link'>
 				<LinkButton
 					href={''}
 					text='Подробнее'
 				/>
 			</div>
-			<span />
 		</section>
 	);
 };

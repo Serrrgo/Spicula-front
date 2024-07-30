@@ -8,13 +8,12 @@ export async function middleware(request: NextRequest, response: NextResponse) {
 	// * получаем доступ к куке
 	const refreshToken = cookies.get(EnumTokens.REFRESH_TOKEN)?.value;
 	console.log(refreshToken);
-
 	// * проверка страницы
 	const isAuthPage = url.includes('/auth');
 
 	// * если есть токен - отправляем сразу в ЛК
 	if (isAuthPage && refreshToken) {
-		return NextResponse.redirect(new URL(SITE_PAGES.CLIENT, url));
+		return NextResponse.redirect(new URL(SITE_PAGES.USER, url));
 	}
 	// * если токена нет и попытка попасть на страницу авторизации - пропускаем
 	if (isAuthPage) {
@@ -31,5 +30,5 @@ export async function middleware(request: NextRequest, response: NextResponse) {
 
 // ! "защищенные" страницы, недоступные с улицы
 export const config = {
-	matcher: ['/client', '/auth'],
+	matcher: ['/user', '/auth'],
 };

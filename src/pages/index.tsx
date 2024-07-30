@@ -16,8 +16,8 @@ export const getStaticProps: GetStaticProps<TypedStaticProps> = async () => {
 		perPage: 8,
 	});
 	const { data: bestsells } = await productService.getAll({
-		page: 8,
-		perPage: 8,
+		page: 1,
+		perPage: 16,
 	});
 	return {
 		props: { populars, bestsells },

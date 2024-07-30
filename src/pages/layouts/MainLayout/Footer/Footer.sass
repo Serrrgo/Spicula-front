@@ -5,13 +5,11 @@ footer
   border-bottom: var(--body-border)
   grid-template-columns: repeat(4, 1fr)
   & > *
-    border-right: var(--body-border)
+    box-shadow: var(--sharder-body-right)
     width: 100%
     height: 100%
     display: flex
     flex-direction: column
-    &:last-child
-      border-right: none
 
 .footer
   &__col
@@ -19,8 +17,7 @@ footer
       font-size: var(--fs-hhhh)
       border-bottom: var(--body-border)
       text-align: center
-      line-height: 3.5em
-      height: 3.5em
+      line-height: 3em
       margin-bottom: 3rem
     &_item
       margin-inline: 3rem

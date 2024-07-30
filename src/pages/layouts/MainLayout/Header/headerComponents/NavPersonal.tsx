@@ -4,7 +4,7 @@ import { Icon } from '@iconify-icon/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { SITE_PAGES } from '@/config/pages-url.config';
+import { DASHBOARD_PAGES, SITE_PAGES } from '@/config/pages-url.config';
 import { openModal } from '@/store/auth/auth.slice';
 import { useTypedSelector } from '@/store/storeHooks/useTypedSelector';
 
@@ -28,6 +28,7 @@ const NavPersonal = () => {
 			setUserName(isUser.firstName);
 		}
 	}, [isUser]);
+	//console.log(SITE_PAGES);
 	const UserButton: React.FC<IUserButtonsProps> = ({
 		icon,
 		text,
@@ -55,15 +56,15 @@ const NavPersonal = () => {
 	return (
 		<div className='nav__personal'>
 			<UserButton
-				pageHref={SITE_PAGES.CLIENT}
+				pageHref={DASHBOARD_PAGES.FAVS}
 				icon='prime:heart'
 			/>
 			<UserButton
-				pageHref={SITE_PAGES.CLIENT}
+				pageHref={DASHBOARD_PAGES.CART}
 				icon='prime:shopping-bag'
 			/>
 			<UserButton
-				pageHref={SITE_PAGES.CLIENT}
+				pageHref={DASHBOARD_PAGES.PROFILE}
 				icon={userName != '' ? '' : 'prime:sign-out'}
 				text={userName == '' ? 'Войти' : userName}
 			/>

@@ -1,9 +1,9 @@
 import MainAction from '@/components/mainPage/sectionHead/action/MainAction';
-import MainDisplay from '@/components/mainPage/sectionHead/dispaly/MainDisplay';
-import { displayData } from '@/components/mainPage/sectionHead/dispaly/display.data';
 import MainSubtitle from '@/components/mainPage/sectionHead/subtitle/MainSubtitle';
 import MainTitle from '@/components/mainPage/sectionHead/title/MainTitle';
-import { titleFont } from '@/fonts';
+import MainDisplay from './sectionHead/dispaly/MainDisplay';
+import { displayData } from './sectionHead/dispaly/display.data';
+import { titleFont } from '@/styles/fonts';
 
 const SectionHead = () => {
 	return (

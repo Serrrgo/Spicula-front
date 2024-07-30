@@ -14,7 +14,7 @@ const SectionFAQ = () => {
 	}, [activeIndex]); // Обновляем ответ при смене activeIndex
 	return (
 		<section className='sectionFAQ'>
-			<div className='sectionFAQ__title'>
+			<div className=' title sectionFAQ__title'>
 				<h2 className={titleFont.className}>FAQ</h2>
 			</div>
 			<span />
@@ -25,7 +25,7 @@ const SectionFAQ = () => {
 				>
 					<h4
 						className={`sectionFAQ__quest_title ${i == activeIndex ? 'active' : ''}`}
-						onClick={(e) => setActiveIndex(i)}
+						onClick={e => setActiveIndex(i)}
 					>
 						{item.question}
 						<Icon

@@ -42,7 +42,7 @@ const AuthForm: FC<AuthFormProps> = ({ isLoginForm }) => {
 	const onSubmit: SubmitHandler<IAuthForm> = async data => {
 		let { email, password, firstName } = data;
 		if (!isLoginForm && firstName) {
-			data.email = email.trim();
+			data.email = email.trim().toLowerCase();
 			data.password = password.trim();
 			data.firstName = formatFormData(firstName);
 		}

@@ -11,7 +11,6 @@ interface SmallProductItem extends HTMLAttributes<HTMLDivElement> {
 }
 
 const SmallProductItem: FC<SmallProductItem> = ({ product, ...props }) => {
-	//console.log(product);
 	return (
 		<div
 			className={styles.smallprod}
@@ -22,7 +21,6 @@ const SmallProductItem: FC<SmallProductItem> = ({ product, ...props }) => {
 					src={product.images[0]}
 					alt={product.name}
 					style={{ objectFit: 'cover' }}
-					//style={{ objectFit: 'contain' }}
 					fill
 				/>
 				<FavoriteBtn prodId={product.id} />

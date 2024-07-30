@@ -1,15 +1,14 @@
 import Image from 'next/image';
 import { LAW_DATA } from '@/constants/law.constants';
-import LinkButton from '../ui/linkButton/LinkButton';
-//import SocialsLink from '@/layout/Footer/footerComponents/SocialsLink';
 import SocialButton from '../ui/socialButton/SocialButton';
+//import SocialsLink from '@/layout/Footer/footerComponents/SocialsLink';
 import { titleFont } from '@/fonts';
 import Sign from '@/public/mainPage/shatova_sign.svg';
 
 const sectionAbout = () => {
 	return (
 		<section className='sectionAbout'>
-			<div className='sectionAbout__title'>
+			<div className='title sectionAbout__title'>
 				<h2 className={titleFont.className}>О нас</h2>
 			</div>
 			<div className='sectionAbout__photo'>
@@ -39,10 +38,10 @@ const sectionAbout = () => {
 			</article>
 			<div className='sectionAbout__action'>
 				<span className='sectionAbout__action_btnspan'>
-					<LinkButton
+					{/*<LinkButton
 						href='/'
 						text='Подробнее'
-					/>
+					/>*/}
 				</span>
 				<span className='sectionAbout__action_socialspan'>
 					<SocialButton
